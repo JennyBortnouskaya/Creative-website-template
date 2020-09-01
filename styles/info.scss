@@ -1,0 +1,143 @@
+.mobile__info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-weight: $font-normal;
+  font-size: $font-size-7;
+  line-height: $line-height-6;
+  margin: 0 10px;
+  .info__title {
+    font-weight: $font-bold;
+    font-size: $font-size-6;
+    line-height: $line-height-5;
+    letter-spacing:$letter-spacing-5;
+    color: $tertiary-color;
+    margin: 5px;
+    span {
+      color:$secondary-color;
+    }
+  }
+  .options {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    &__swap {
+      min-width: 224px;
+      max-width: 224px;
+      margin: 20px 20px;
+      &::before {
+        content: url(img/icon-thumb.png);
+        padding: 19px 14.5px 13px;
+        background: $octonary-bg-color;
+        border-radius:$border-radius-3;
+      }
+
+    }
+    &__detach {
+      @extend .options__swap;
+      margin: 5px 20px;
+      &::before {
+        content: url(img/icon-zap-off.png);
+        background: $nonary-bg-color;
+        padding: 29px 5px$letter-spacing-1;
+
+      }
+    }
+    &__toogle {
+      @extend .options__swap;
+      margin: 10px 20px;
+      &::before {
+        content: url(img/icon-linkedin.png);
+        background: $denary-bg-color;
+        padding: 29px 5px$letter-spacing-1;
+
+      }
+    }
+    &__replace {
+      @extend .options__swap;
+      margin: 10px 20px;
+      &::before {
+        content: url(img/icon-briefcase.png);
+        background: $senary-bg-color;
+        padding: 29px 5px$letter-spacing-1;
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .info {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    margin: 100px 0;
+    &__title {
+      font-weight: $font-bold;
+      font-size: 32px;
+      line-height: $line-height-4;
+      letter-spacing:$letter-spacing-6;
+    }
+    &__subtitle {
+      width: 980px;
+      font-weight: $font-normal;
+      font-size: $font-size-6;
+      line-height: $line-height-5;
+      letter-spacing:$letter-spacing-6;
+    }
+    .details {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+      &__support {
+        width: 270px;
+        h3 {
+          font-weight: $font-bold;
+          font-size: $font-size-6;
+          line-height: $line-height-5;
+          letter-spacing:$letter-spacing-5;
+        }
+        p {
+          font-weight: $font-normal;
+          font-size: $font-size-7;
+          line-height: $line-height-6;
+        }
+        &:before {
+          content: url(img/icon-phone-call.png);
+          display: flex;
+          width: 58px;
+          height: 64px;
+          justify-content: center;
+          padding: 6px 6px 0;
+          background: $denary-bg-color;
+          border-radius:$border-radius-1;
+        }
+      }
+      &__sales {
+        @extend .details__support;
+        &:before {
+          content: url(img/icon-pie-chart.png);
+          background: #0984E3;
+        }
+      }
+      &__components {
+        @extend .details__support;
+        &:before {
+          content: url(img/icon-zap.png);
+          background:$secondary-bg-color;
+        }
+      }
+      &__icon {
+        @extend .details__support;
+        &:before {
+          content: url(img/icon-thumbs-up.png);
+          background: $nonary-bg-color;
+        }
+      }
+    }
+  }
+}
