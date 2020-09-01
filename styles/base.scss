@@ -4,12 +4,12 @@ html {
 }
 body {
   font-family: $font-family;
-  background-color: #A29BFE;
-  color: #2D3436;
-  font-style: normal;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 32px;
+  background-color: $main-page-bg-color;
+  color: $main-page-color;
+  font-style: $font-style;
+  font-size: $font-size-7;
+  font-weight: $font-normal;
+  line-height: $line-height-6;
 }
 * {
   box-sizing: border-box;
