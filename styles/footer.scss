@@ -1,0 +1,235 @@
+.mobile__footer {
+  text-align: center;
+  p:first-child {
+    font-weight: $font-medium;
+    font-size: $font-size-8;
+    line-height: $line-height-7;
+    letter-spacing:$letter-spacing-4;
+  }
+  p:nth-child(2) {
+    font-weight: $font-normal;
+    font-size: $font-size-10;
+    line-height: $line-height-8;
+    letter-spacing:$letter-spacing-3;
+    color: #00B894;
+  }
+  p:nth-child(3) {
+    font-weight: $font-bold;
+    font-size: $font-size-7;
+    line-height: $line-height-6;
+    letter-spacing:$letter-spacing-4;
+    color:$secondary-color;
+  }
+  .social_media {
+    display: flex;
+    justify-content: center;
+    .facebook {
+      background: url("img/icon-facebook.png");
+      height: 40px;
+      width: 40px;
+      margin: 0 10px;
+      &:hover {
+        filter: drop-shadow(0 0 0.75rem$secondary-bg-color);
+      }
+    }
+    .linkedIn {
+      @extend .facebook;
+      background: url("img/icon-linkedin-black.png");
+    }
+    .slack {
+      @extend .facebook;
+      background: url("img/icon-slack.png");
+    }
+    .twitter {
+      @extend .facebook;
+      background: url("img/icon-twitter.png");
+    }
+    .youtube {
+      @extend .facebook;
+      background: url("img/icon-youtube.png");
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .desktop__footer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+
+    .useful_info {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      width: 700px;
+      justify-content: space-between;
+      margin: 0 0 50px 0;
+      .social_media {
+        display: flex;
+        justify-content: space-evenly;
+        width: 300px;
+        .facebook {
+          background: url("img/icon-facebook-violet.png");
+          width: 40px;
+          height: 40px;
+        }
+        .linkedin {
+          background: url("img/icon-linkedin-violet.png");
+          width: 40px;
+          height: 40px;
+        }
+        .slack {
+          background: url("img/icon-slack-violet.png");
+          width: 40px;
+          height: 40px;
+        }
+        .twitter {
+          background: url("img/icon-twitter-violet.png");
+          width: 40px;
+          height: 40px;
+        }
+        &:before {
+          content: "follow us";
+          position: relative;
+          bottom: 49px;
+          left: 103px;
+          text-transform: uppercase;
+          font-weight: $font-extraBold;
+          font-size: $font-size-10;
+          line-height: $line-height-10;
+          display: flex;
+          align-items: center;
+          letter-spacing:$letter-spacing-2;
+          color: $quaternary-color;
+        }
+      }
+      .fast_nav {
+        display: flex;
+        justify-content: right;
+        width: 700px;
+        text-align: left;
+        font-weight: $font-normal;
+        font-size: $font-size-8;
+        line-height: $line-height-7;
+        letter-spacing:$letter-spacing-5;
+        margin: 50px 0 0;
+        .nav_option {
+          width: 170px;
+          height: 24px;
+          margin: 0 25px 10px 0;
+        }
+        &:before {
+          content: "information";
+          position: relative;
+          bottom: 80px;
+          left: 114px;
+          text-transform: uppercase;
+          font-weight: $font-extraBold;
+          font-size: $font-size-10;
+          line-height: $line-height-10;
+          display: flex;
+          align-items: center;
+          letter-spacing:$letter-spacing-2;
+          color: $quaternary-color;
+        }
+      }
+    }
+    .contact__info {
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 116px;
+      h3 {
+        font-weight: $font-bold;
+        font-size: $font-size-4;
+        letter-spacing:$letter-spacing-6;
+        color:$secondary-color;
+        text-align: left;
+        margin: 0;
+        &:before {
+          content: "follow us";
+          position: relative;
+          bottom: 33px;
+          text-transform: uppercase;
+          font-weight: $font-extraBold;
+          font-size: $font-size-10;
+          line-height: $line-height-10;
+          display: flex;
+          align-items: center;
+          letter-spacing:$letter-spacing-2;
+          color: $quaternary-color;
+        }
+      }
+    }
+    .contact__forms {
+      display: flex;
+      width: 700px;
+      flex-direction: column;
+      align-items: baseline;
+      height: 200px;
+      justify-content: space-evenly;
+      margin: 55px 0;
+      &:before {
+        content: "keep in touch";
+        position: relative;
+        text-transform: uppercase;
+        font-weight: $font-extraBold;
+        font-size: $font-size-10;
+        line-height: $line-height-10;
+        display: flex;
+        align-items: center;
+        letter-spacing:$letter-spacing-2;
+        color: $quaternary-color;
+      }
+      #input_name {
+        width: 270px;
+        height: 48px;
+        background: #c2c2c266;
+        border-radius:$border-radius-3;
+        border: none;
+        color: $quinary-color;
+        &::placeholder {
+          padding: 0 10px;
+          color: $tertiary-color;
+          font-weight: $font-normal;
+          font-size: $font-size-7;
+          line-height: $line-height-6;
+
+        }
+      }
+      #input_name + label:before {
+        content: url(img/icon-user.png);
+        position: relative;
+        right: 50px;
+        top: 15px;
+      }
+      #input_email {
+        @extend #input_name;
+      }
+      #input_email + label:before {
+        content: url(img/icon-mail.png);
+      }
+      #input_text {
+        @extend #input_name;
+        width: 370px;
+        height: 80px;
+        resize: none;
+        margin: 10px 0;
+        &::placeholder {
+          color:$secondary-color;
+          font-weight: $font-bold;
+          display: flex;
+
+        }
+      }
+      #input_text + label:before {
+        content: url(img/icon-edit.png);
+        top: -15px;
+      }
+    }
+    .contact__send{
+      display: flex;
+      align-items: center;
+    }
+  }
+}

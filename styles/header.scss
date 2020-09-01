@@ -1,0 +1,103 @@
+.menu {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-width: 320px;
+  box-shadow: 0 4px 8px rgba(38, 50, 56, 0.08), 0 2px 4px rgba(38, 50, 56, 0.16);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 16px 15px;
+  background: $primary-bg-color;
+  font-family: $font-family;
+  border-radius: 20px 20px 0 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__image {
+      max-width: 100%;
+    }
+  }
+  &__text {
+    font-size: $font-size-6;
+    line-height: $line-height-5;
+    color: #5C5C5C;
+    letter-spacing:$letter-spacing-5;
+    font-weight: $font-bold;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .header {
+    padding: 16px 135px 16px 150px;
+  }
+
+  .logo__image {
+    width: 70px;
+  }
+
+  .logo__text {
+    font-size: $font-size-5;
+    line-height: $line-height-3;
+    color: $tertiary-color;
+    letter-spacing: $letter-spacing-6;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__nav {
+      white-space: nowrap;
+    }
+    &__link {
+      position: relative;
+      color: $secondary-color;
+      padding: 37px 20px;
+      line-height: $line-height-6;
+      font-size: $font-size-7;
+      &:first-child {
+        color: $tertiary-color;
+        font-weight: $font-bold;
+      }
+      &:hover {
+        color: $tertiary-color;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: -4px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: url(img/menu-separator.png) $tertiary-bg-color;
+      }
+      &:first-child::before {
+        display: none;
+      }
+      &:active {
+        font-weight: $font-bold;
+        font-size: $font-size-7;
+        letter-spacing: $letter-spacing-4;
+        color: $tertiary-color;
+      }
+    }
+  }
+}

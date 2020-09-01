@@ -1,0 +1,117 @@
+.button__sign {
+  padding: 4px 34px;
+  border-radius:$border-radius-3;
+  background:$secondary-bg-color;
+  color: $primary-color;
+  font-weight: $font-bold;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(38, 50, 56, 0.16), 0 4px 8px rgba(38, 50, 56, 0.08);
+  box-shadow: 0 2px 4px rgba(38, 50, 56, 0.16), 0 4px 8px rgba(38, 50, 56, 0.08);
+}
+.button__learn {
+  display: flex;
+  justify-content: center;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  font-size: $font-size-7;
+  line-height: $line-height-6;
+  letter-spacing:$letter-spacing-4;
+  padding: 8px;
+  color:$secondary-color;
+  background: $primary-bg-color;
+  border: 0.75px solid $quaternary-color;
+  border-radius:$border-radius-3;
+}
+.button__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 282px;
+  height: 48px;
+  margin: 50px 0 50px 25px;
+  border-radius: 16px;
+  background-color:$secondary-bg-color;
+  color: $primary-color;
+  font-weight: $font-bold;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1152px) {
+  .button__sign {
+    padding: 14px 30px;
+    border-radius:$border-radius-1;
+    font-size: $font-size-6;
+    line-height: $line-height-5;
+    box-shadow: none;
+  }
+  .button__learn {
+    display: flex;
+    justify-content: center;
+    font-weight: $font-bold;
+    font-size: 32px;
+    line-height: $line-height-4;
+    padding: 13.5px 31px;
+    color:$secondary-color;
+    background: $primary-bg-color;
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.1), 0 16px 32px rgba(38, 50, 56, 0.08);
+    border-radius:$border-radius-1;
+  }
+  .button__details {
+    padding: 10px;
+    width: 146px;
+    background: $primary-bg-color;
+    border: 1px solid $quaternary-color;
+    box-sizing: border-box;
+    border-radius:$border-radius-3;
+    font-family: $font-family;
+    font-weight: $font-bold;
+    font-size: $font-size-7;
+    line-height: $line-height-6;
+    display: flex;
+    justify-content: center;
+    letter-spacing:$letter-spacing-4;
+    color:$secondary-color;
+  }
+  .button__try {
+    padding: 15px;
+    background: $primary-bg-color;
+    border: 1px solid $quaternary-color;
+    box-sizing: border-box;
+    border-radius:$border-radius-3;
+    font-family: $font-family;
+    font-weight: $font-bold;
+    font-size: $font-size-7;
+    line-height: $line-height-6;
+    display: flex;
+    justify-content: center;
+    letter-spacing:$letter-spacing-4;
+    color:$secondary-color;
+  }
+  .button__regular {
+    @extend .button__try;
+    background:$secondary-bg-color;
+    color: $primary-color;
+    font-size: $font-size-6;
+    line-height: $line-height-5;
+  }
+  .button__extended {
+    @extend .button__try;
+  }
+  .button__send{
+    width: 170px;
+    padding: 21px;
+    background:$secondary-bg-color;
+    box-sizing: border-box;
+    border-radius:$border-radius-3;
+    font-family: $font-family;
+    font-weight: $font-bold;
+    font-size: $font-size-6;
+    text-transform: uppercase;
+    line-height: $line-height-5;
+    display: flex;
+    justify-content: center;
+    letter-spacing:$letter-spacing-4;
+    color: $primary-color;
+    text-shadow: 0 2px 4px rgba(38, 50, 56, 0.16), 0 4px 8px rgba(38, 50, 56, 0.08);
+    box-shadow: 0 8px 24px rgba(38, 50, 56, 0.1), 0 16px 32px rgba(38, 50, 56, 0.08);
+  }
+}
